@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shamahoque/mern-social.git"
+    "url": "https://github.com/HailuBoc/mern-social.git"
   },
-  "homepage": "https://github.com/shamahoque/mern-social",
+  "homepage": "https://github.com/HailuBoc/mern-social",
   "main": "./dist/server.generated.js",
   "scripts": {
     "development": "nodemon",
