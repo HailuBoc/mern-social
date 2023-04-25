@@ -5,7 +5,9 @@ import { ThemeProvider } from '@material-ui/styles'
 import theme from './theme'
 import { hot } from 'react-hot-loader'
 
+// Main application component
 const App = () => {
+  // Remove server-side JSS styles when client mounts
   React.useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
