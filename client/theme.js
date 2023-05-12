@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { teal, orange } from '@material-ui/core/colors'
 
+// Application theme configuration
 const theme = createMuiTheme({
     palette: {
       primary: {
