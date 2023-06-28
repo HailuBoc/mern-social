@@ -1,5 +1,6 @@
 import { signout } from './api-auth.js'
 
+// Authentication helper functions
 const auth = {
   isAuthenticated() {
     if (typeof window == "undefined")
