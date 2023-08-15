@@ -1,9 +1,9 @@
 import User from '../models/user.model'
 import extend from 'lodash/extend'
-import errorHandler from './../helpers/dbErrorHandler'
+import errorHandler from '../helpers/dbErrorHandler'
 import formidable from 'formidable'
 import fs from 'fs'
-import profileImage from './../../client/assets/images/profile-pic.png'
+import profileImage from '../../client/assets/images/profile-pic.png'
 
 const create = async (req, res) => {
   const user = new User(req.body)
