@@ -124,7 +124,7 @@ const addFollowing = async (req, res, next) => {
 }
 
 const addFollower = async (req, res) => {
-  try{
+  try {
     let result = await User.findByIdAndUpdate(req.body.followId, {$push: {followers: req.body.userId}}, {new: true})
                             .populate('following', '_id name')
                             .populate('followers', '_id name')
@@ -132,11 +132,11 @@ const addFollower = async (req, res) => {
       result.hashed_password = undefined
       result.salt = undefined
       res.json(result)
-    }catch(err) {
-      return res.status(400).json({
-        error: errorHandler.getErrorMessage(err)
-      })
-    }  
+  } catch (err) {
+    return res.status(400).json({
+      error: errorHandler.getErrorMessage(err)
+    })
+  }
 }
 
 const removeFollowing = async (req, res, next) => {
