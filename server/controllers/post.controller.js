@@ -79,10 +79,10 @@ const listNewsFeed = async (req, res) => {
 
 const remove = async (req, res) => {
   let post = req.post
-  try{
+  try {
     let deletedPost = await post.remove()
     res.json(deletedPost)
-  }catch(err){
+  } catch (err) {
     return res.status(400).json({
       error: errorHandler.getErrorMessage(err)
     })
