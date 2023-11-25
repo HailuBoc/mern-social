@@ -106,10 +106,10 @@ const like = async (req, res) => {
 }
 
 const unlike = async (req, res) => {
-  try{
+  try {
     let result = await Post.findByIdAndUpdate(req.body.postId, {$pull: {likes: req.body.userId}}, {new: true})
     res.json(result)
-  }catch(err){
+  } catch (err) {
     return res.status(400).json({
       error: errorHandler.getErrorMessage(err)
     })
