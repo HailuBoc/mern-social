@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 import crypto from 'crypto'
+
+// User schema definition
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
