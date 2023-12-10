@@ -1,4 +1,6 @@
 import mongoose from 'mongoose'
+
+// Post schema definition
 const PostSchema = new mongoose.Schema({
   text: {
     type: String,
