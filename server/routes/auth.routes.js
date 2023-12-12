@@ -1,6 +1,7 @@
 import express from 'express'
 import authCtrl from '../controllers/auth.controller'
 
+// Authentication routes
 const router = express.Router()
 
 router.route('/auth/signin')
