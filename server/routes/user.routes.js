@@ -2,6 +2,7 @@ import express from 'express'
 import userCtrl from '../controllers/user.controller'
 import authCtrl from '../controllers/auth.controller'
 
+// User routes
 const router = express.Router()
 
 router.route('/api/users')
