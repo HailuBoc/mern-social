@@ -3,6 +3,7 @@ import userCtrl from '../controllers/user.controller'
 import authCtrl from '../controllers/auth.controller'
 import postCtrl from '../controllers/post.controller'
 
+// Post routes
 const router = express.Router()
 
 router.route('/api/posts/new/:userId')
