@@ -171,7 +171,7 @@ const findPeople = async (req, res) => {
   try {
     let users = await User.find({ _id: { $nin : following } }).select('name')
     res.json(users)
-  }catch(err){
+  } catch (err) {
     return res.status(400).json({
       error: errorHandler.getErrorMessage(err)
     })
