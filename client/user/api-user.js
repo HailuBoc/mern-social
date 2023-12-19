@@ -9,8 +9,9 @@ const create = async (user) => {
       body: JSON.stringify(user)
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error creating user:', err)
+    return { error: 'Failed to create user' }
   }
 }
 
