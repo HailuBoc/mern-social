@@ -22,8 +22,9 @@ const list = async (signal) => {
       signal: signal
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error listing users:', err)
+    return { error: 'Failed to fetch users' }
   }
 }
 
