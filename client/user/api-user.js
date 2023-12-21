@@ -39,8 +39,9 @@ const read = async (params, credentials, signal) => {
       }
   })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error reading user:', err)
+    return { error: 'Failed to fetch user' }
   }
 }
 
