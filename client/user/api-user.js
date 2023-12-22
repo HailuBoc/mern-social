@@ -56,8 +56,9 @@ const update = async (params, credentials, user) => {
       body: user
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error updating user:', err)
+    return { error: 'Failed to update user' }
   }
 }
 
