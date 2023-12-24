@@ -91,8 +91,9 @@ const follow = async (params, credentials, followId) => {
       body: JSON.stringify({userId:params.userId, followId: followId})
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error following user:', err)
+    return { error: 'Failed to follow user' }
   }
 }
 
