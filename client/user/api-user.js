@@ -109,8 +109,9 @@ const unfollow = async (params, credentials, unfollowId) => {
       body: JSON.stringify({userId:params.userId, unfollowId: unfollowId})
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error unfollowing user:', err)
+    return { error: 'Failed to unfollow user' }
   }
 }
 
