@@ -125,10 +125,11 @@ const findPeople = async (params, credentials, signal) => {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + credentials.t
       }
-    })    
+    })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error finding people:', err)
+    return { error: 'Failed to find people' }
   }
 }
 
