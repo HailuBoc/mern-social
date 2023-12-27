@@ -9,8 +9,9 @@ const create = async (params, credentials, post) => {
       body: post
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error creating post:', err)
+    return { error: 'Failed to create post' }
   }
 }
 
