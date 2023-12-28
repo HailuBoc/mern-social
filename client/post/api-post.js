@@ -26,8 +26,9 @@ const listByUser = async (params, credentials) => {
       }
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error listing posts by user:', err)
+    return { error: 'Failed to fetch posts' }
   }
 }
 
