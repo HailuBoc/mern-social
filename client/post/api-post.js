@@ -42,10 +42,11 @@ const listNewsFeed = async (params, credentials, signal) => {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + credentials.t
       }
-    })    
+    })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error fetching news feed:', err)
+    return { error: 'Failed to fetch news feed' }
   }
 }
 
