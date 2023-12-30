@@ -99,8 +99,9 @@ const unlike = async (params, credentials, postId) => {
       body: JSON.stringify({userId:params.userId, postId: postId})
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error unliking post:', err)
+    return { error: 'Failed to unlike post' }
   }
 }
 
