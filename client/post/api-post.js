@@ -118,8 +118,9 @@ const comment = async (params, credentials, postId, comment) => {
       body: JSON.stringify({userId:params.userId, postId: postId, comment: comment})
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error commenting on post:', err)
+    return { error: 'Failed to comment on post' }
   }
 }
 
