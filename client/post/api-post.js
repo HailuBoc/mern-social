@@ -137,8 +137,9 @@ const uncomment = async (params, credentials, postId, comment) => {
       body: JSON.stringify({userId:params.userId, postId: postId, comment: comment})
     })
     return await response.json()
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.error('Error uncommenting on post:', err)
+    return { error: 'Failed to uncomment on post' }
   }
 }
 
